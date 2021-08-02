@@ -1,0 +1,23 @@
+/* GENERAL BODY CSS */
+
+body {
+    margin: 0;
+}
+
+/* NAV */
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #7cd911;
+}
+
+/* Search box */
+
+.search-box {
+    height: 300px;
+    width: auto;
+    display: flex;
+    justify-co
+}
