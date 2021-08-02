@@ -17,7 +17,7 @@ nav {
 
 /* Search box */
 
-.main-body-content {
+.main-body-search {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,6 +26,10 @@ nav {
 
 h1, h4, input {
     margin: 10px;
+}
+
+h4 {
+    margin-top: 20px;
 }
 
 input {
@@ -52,3 +56,22 @@ input {
       font-size: .8rem;
     }
   }
+
+/* Display Weather Box */
+
+.main-body-display-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.display-box {
+    display: flex;
+    height: 400px;
+    width: 1000px;
+    margin-top: 80px;
+    background-color: #e1e5eb;
+    border: 1px solid black;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 10px black;
+}
