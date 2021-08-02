@@ -2,6 +2,8 @@
 
 body {
     margin: 0;
+    background: url(skyimage.jpg) no-repeat center center fixed;
+    background-size: cover;
 }
 
 /* NAV */
@@ -15,9 +17,27 @@ nav {
 
 /* Search box */
 
-.search-box {
-    height: 300px;
-    width: auto;
+.main-body-content {
     display: flex;
-    justify-co
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+}
+
+h1, h4, input {
+    margin: 10px;
+}
+
+input {
+    width: 90%;
+}
+
+.search-box {
+    height: 200px;
+    width: auto;
+    display: block;
+    border: 1px solid black;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 10px black;
+    background-color: #e1e5eb;
 }
