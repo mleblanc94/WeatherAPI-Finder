@@ -1,5 +1,15 @@
-let submit = document.getElementById("button");
-let input = document.querySelector(".input-value");
+let submit = document.getElementById('button');
+let input = document.querySelector('.input-value');
+let display1 = document.querySelector('.display1');
+let display2 = document.querySelector('.display2');
+let display3 = document.querySelector('.display3');
+let display4 = document.querySelector('.display4');
+let display5 = document.querySelector('.display5');
 
+submit.addEventListener('click', function(){
+    fetch('https://api.openweathermap.org/data/2.5/weather?q='+input.value+'&appid=0bc1bbb965b846849bf98c2ba435f069')
+    .then(response => response.json())
+    .then(data => console.log(data));
 
-// addEventListener("click", testFunction);
+    catch(err => alert("Wrong city name"))
+});
