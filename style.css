@@ -21,7 +21,7 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 25px;
+    margin-top: 55px;
 }
 
 h1, h4, input {
@@ -30,6 +30,7 @@ h1, h4, input {
 
 input {
     width: 90%;
+    margin-top: 30px;
 }
 
 .search-box {
@@ -41,3 +42,13 @@ input {
     box-shadow: 0 0 10px 10px black;
     background-color: #e1e5eb;
 }
+
+.button-class {
+    text-align: center;
+}
+
+@media only screen and (max-width: 500px) {
+    h1 {
+      font-size: .8rem;
+    }
+  }
