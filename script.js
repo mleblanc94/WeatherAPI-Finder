@@ -6,10 +6,16 @@ let display3 = document.querySelector('.display3');
 let display4 = document.querySelector('.display4');
 let display5 = document.querySelector('.display5');
 
-submit.addEventListener('click', function(){
-    fetch('https://api.openweathermap.org/data/2.5/weather?q='+input.value+'&appid=0bc1bbb965b846849bf98c2ba435f069')
-    .then(response => response.json())
-    .then(data => console.log(data));
+submit.addEventListener('click', getWeather);
 
-    catch(err => alert("Wrong city name"))
-});
+
+async function getWeather() {
+      let apiUrl = 'https://api.openweathermap.org/data/2.5/weather?q='+input.value+'&appid=0bc1bbb965b846849bf98c2ba435f069';
+         try {
+       const response = await fetch(apiUrl);
+       apiWeather = await response.json();
+       console.log(apiWeather);
+    } catch(error) {
+        console.log("An error occurred");
+          }
+       }
