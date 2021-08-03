@@ -3,8 +3,6 @@ let input = document.querySelector('.input-value');
 let display1 = document.querySelector('.display1');
 let display2 = document.querySelector('.display2');
 let display3 = document.querySelector('.display3');
-let display4 = document.querySelector('.display4');
-let display5 = document.querySelector('.display5');
 
 submit.addEventListener('click', getWeather);
 
