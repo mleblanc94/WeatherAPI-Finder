@@ -42,7 +42,7 @@ input {
 }
 
 .search-box {
-    height: 250px;
+    height: 200px;
     width: auto;
     display: block;
     border: 1px solid black;
@@ -71,7 +71,7 @@ input {
 
 .display-box {
     display: flex;
-    height: 355px;
+    height: 400px;
     width: 600px;
     margin-top: 40px;
     background-color: #e1e5eb;
