@@ -87,6 +87,10 @@ input {
     border: 1px black solid;
 }
 
+.skyPicture {
+    font-size: 8rem;
+}
+
 .temperature {
     font-size: 4rem;
 }
