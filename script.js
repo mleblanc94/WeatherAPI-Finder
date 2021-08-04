@@ -15,8 +15,9 @@ async function getWeather() {
        apiWeather = await response.json();
        console.log(apiWeather);
        populateTemperature();
+      //  warningMessage();
     } catch(error) {
-        console.log("An error occurred");
+        console.log("an error has occurred");
           }
        }
 
@@ -27,5 +28,13 @@ let populateTemperature = () => {
    let realTemperature = (Math.round(rawTemperature));
    temperature.innerHTML = realTemperature+"<span>&#176;</span>";
 }
+
+
+
+// let warningMessage = () => {
+//    if (apiWeather.message === "city not found") {
+//       errorMessage.innerHTML = "**Sorry, please enter a valid city name**";
+//    }
+// }
 
 
