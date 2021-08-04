@@ -1,8 +1,8 @@
 let submit = document.getElementById('button');
 let input = document.querySelector('.input-value');
-let display1 = document.querySelector('.display1');
-let display2 = document.querySelector('.display2');
-let display3 = document.querySelector('.display3');
+let cityName = document.querySelector('.city-name')
+let temperature = document.querySelector('.temperature');
+
 
 submit.addEventListener('click', getWeather);
 

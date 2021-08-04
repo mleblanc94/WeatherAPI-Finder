@@ -21,7 +21,7 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 55px;
+    margin-top: 45px;
 }
 
 h1, h4, input {
@@ -32,13 +32,17 @@ h4 {
     margin-top: 20px;
 }
 
+.error-message {
+    display: none;
+}
+
 input {
     width: 90%;
     margin-top: 30px;
 }
 
 .search-box {
-    height: 200px;
+    height: 250px;
     width: auto;
     display: block;
     border: 1px solid black;
@@ -67,9 +71,9 @@ input {
 
 .display-box {
     display: flex;
-    height: 320px;
+    height: 330px;
     width: 600px;
-    margin-top: 80px;
+    margin-top: 50px;
     background-color: #e1e5eb;
     border: 1px solid black;
     border-radius: 20px;
