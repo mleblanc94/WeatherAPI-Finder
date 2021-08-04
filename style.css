@@ -77,8 +77,12 @@ input {
     /* display: none; */
 }
 
-.display1 {
+.display {
     text-align: center;
     width: 100%;
     border: 1px black solid;
+}
+
+.temperature {
+    font-size: 3.5rem;
 }
