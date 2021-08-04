@@ -73,7 +73,7 @@ input {
     display: flex;
     height: 400px;
     width: 600px;
-    margin-top: 40px;
+    margin: 40px 10px 10px 10px;
     background-color: #e1e5eb;
     border: 1px solid black;
     border-radius: 20px;
@@ -85,6 +85,10 @@ input {
     text-align: center;
     width: 100%;
     border: 1px black solid;
+}
+
+.sky {
+    font-size: 4rem;
 }
 
 .skyPicture {
