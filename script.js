@@ -1,6 +1,7 @@
 let submit = document.getElementById('button');
 let input = document.querySelector('.input-value');
-let cityName = document.querySelector('.city-name')
+let errorMessage = document.querySelector('.error-message');
+let cityName = document.querySelector('.city-name');
 let temperature = document.querySelector('.temperature');
 
 
@@ -13,7 +14,18 @@ async function getWeather() {
        const response = await fetch(apiUrl);
        apiWeather = await response.json();
        console.log(apiWeather);
+       populateTemperature();
     } catch(error) {
         console.log("An error occurred");
           }
        }
+
+
+let populateTemperature = () => {
+   let initialRawTemperature = apiWeather.main.temp;
+   let rawTemperature = (initialRawTemperature - 273.15) * 1.8 + 32;
+   let realTemperature = (Math.round(rawTemperature));
+   temperature.innerHTML = realTemperature;
+}
+
+
