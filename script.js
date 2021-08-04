@@ -25,7 +25,7 @@ let populateTemperature = () => {
    let initialRawTemperature = apiWeather.main.temp;
    let rawTemperature = (initialRawTemperature - 273.15) * 1.8 + 32;
    let realTemperature = (Math.round(rawTemperature));
-   temperature.innerHTML = realTemperature;
+   temperature.innerHTML = realTemperature+"<span>&#176;</span>";
 }
 
 
