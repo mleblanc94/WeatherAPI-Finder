@@ -1,3 +1,5 @@
+// Setting Variables
+
 let body = document.querySelector('body');
 let reset = document.getElementById('reset');
 let submit = document.getElementById('button');
@@ -12,6 +14,7 @@ let skyPicture = document.querySelector('.skyPicture');
 
 submit.addEventListener('click', getWeather);
 
+// Fetch the API
 
 async function getWeather() {
       let apiUrl = 'https://api.openweathermap.org/data/2.5/weather?q='+input.value+'&appid=0bc1bbb965b846849bf98c2ba435f069';
@@ -29,6 +32,7 @@ async function getWeather() {
        }
 
 // Populating the Temperature on the main page
+
 let populateTemperature = () => {
    let initialRawTemperature = apiWeather.main.temp;
    let rawTemperature = (initialRawTemperature - 273.15) * 1.8 + 32;
