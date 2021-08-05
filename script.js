@@ -37,6 +37,7 @@ let populateTemperature = () => {
 }
 
 // Populating the Atmoshphere on the main page (Sunny, Cloudy, Overcast, etc.)
+
 let atmosphere = () => {
    let initialAtmosphere = apiWeather.weather[0].description;
    sky.innerHTML = initialAtmosphere;
@@ -50,7 +51,7 @@ let atmosphere = () => {
       body.style.backgroundSize = 'cover';
    } else if (initialAtmosphere === "few clouds") {
       skyPicture.innerHTML = '<i class="fas fa-cloud-sun"></i>';
-      body.style.background = 'url(cloudy.webp) no-repeat center center fixed';
+      body.style.background = 'url(partlyCloudy.jpg) no-repeat center center fixed';
       body.style.backgroundSize = 'cover';
    } else if (initialAtmosphere === "clear sky") {
       skyPicture.innerHTML = '<i class="fas fa-sun"></i>';
@@ -62,11 +63,21 @@ let atmosphere = () => {
       body.style.backgroundSize = 'cover';
    } else if (initialAtmosphere === "scattered clouds") {
       skyPicture.innerHTML = '<i class="fas fa-cloud""></i>';
-      body.style.background = 'url(cloudy.webp) no-repeat center center fixed';
+      body.style.background = 'url(partlyCloudy.jpg) no-repeat center center fixed';
+      body.style.backgroundSize = 'cover';
+   } else if (initialAtmosphere === "haze") {
+      skyPicture.innerHTML = '<i class="fas fa-smog"></i>';
+      body.style.background = 'url(haze.jpg) no-repeat center center fixed';
+      body.style.backgroundSize = 'cover';
+   } else if (initialAtmosphere === "broken clouds") {
+      skyPicture.innerHTML = '<i class="fas fa-cloud"></i>';
+      body.style.background = 'url(partlyCloudy.jpg) no-repeat center center fixed';
       body.style.backgroundSize = 'cover';
    }
    console.log(initialAtmosphere);
 }
+
+// Reset Button
 
 let resetButton = () => {
    input.value = "";
