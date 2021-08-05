@@ -1,6 +1,8 @@
 let body = document.querySelector('body');
+let reset = document.getElementById('reset');
 let submit = document.getElementById('button');
 let input = document.querySelector('.input-value');
+let displayBox = document.querySelector('.display-box');
 let errorMessage = document.querySelector('.error-message');
 let cityName = document.querySelector('.city-name');
 let temperature = document.querySelector('.temperature');
@@ -17,6 +19,7 @@ async function getWeather() {
        const response = await fetch(apiUrl);
        apiWeather = await response.json();
        console.log(apiWeather);
+       displayBox.style.display = 'flex';
        populateTemperature();
        atmosphere();
       //  warningMessage();
@@ -51,7 +54,7 @@ let atmosphere = () => {
       body.style.backgroundSize = 'cover';
    } else if (initialAtmosphere === "clear sky") {
       skyPicture.innerHTML = '<i class="fas fa-sun"></i>';
-      body.style.background = 'url(cloudy.webp) no-repeat center center fixed';
+      body.style.background = 'url(clearSkies.jpg) no-repeat center center fixed';
       body.style.backgroundSize = 'cover';
    } else if (initialAtmosphere === "moderate rain") {
       skyPicture.innerHTML = '<i class="fas fa-cloud-rain"></i>';
@@ -60,6 +63,16 @@ let atmosphere = () => {
    }
    console.log(initialAtmosphere);
 }
+
+let resetButton = () => {
+   input.value = "";
+   displayBox.style.display = 'none';
+   body.style.background = 'url(skyimage.jpg) no-repeat center center fixed';
+   body.style.backgroundSize = 'cover';
+
+}
+
+reset.addEventListener('click', resetButton);
 
 
 
