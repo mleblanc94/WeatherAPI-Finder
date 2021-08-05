@@ -44,6 +44,8 @@ let atmosphere = () => {
       skyPicture.innerHTML = '<i class="fas fa-cloud-sun"></i>';
    } else if (initialAtmosphere === "clear sky") {
       skyPicture.innerHTML = '<i class="fas fa-sun"></i>';
+   } else if (initialAtmosphere === "moderate rain") {
+      skyPicture.innerHTML = '<i class="fas fa-cloud-rain"></i>';
    }
    console.log(initialAtmosphere);
 }
