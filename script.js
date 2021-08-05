@@ -60,6 +60,10 @@ let atmosphere = () => {
       skyPicture.innerHTML = '<i class="fas fa-cloud-rain"></i>';
       body.style.background = 'url(rainClouds.webp) no-repeat center center fixed';
       body.style.backgroundSize = 'cover';
+   } else if (initialAtmosphere === "scattered clouds") {
+      skyPicture.innerHTML = '<i class="fas fa-cloud""></i>';
+      body.style.background = 'url(cloudy.webp) no-repeat center center fixed';
+      body.style.backgroundSize = 'cover';
    }
    console.log(initialAtmosphere);
 }
