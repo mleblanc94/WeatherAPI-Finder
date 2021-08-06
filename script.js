@@ -11,9 +11,6 @@ let temperature = document.querySelector('.temperature');
 let sky = document.querySelector('.sky');
 let skyPicture = document.querySelector('.skyPicture');
 
-
-submit.addEventListener('click', getWeather);
-
 // Fetch the API
 
 async function getWeather() {
@@ -91,7 +88,10 @@ let resetButton = () => {
 
 }
 
+// Event Listeners
+
 reset.addEventListener('click', resetButton);
+submit.addEventListener('click', getWeather);
 
 
 
