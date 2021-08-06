@@ -74,6 +74,10 @@ let atmosphere = () => {
       skyPicture.innerHTML = '<i class="fas fa-cloud"></i>';
       body.style.background = 'url(partlyCloudy.jpg) no-repeat center center fixed';
       body.style.backgroundSize = 'cover';
+   } else if (initialAtmosphere === "mist") {
+      skyPicture.innerHTML = '<i class="fas fa-cloud"></i>';
+      body.style.background = 'url(mist.webp) no-repeat center center fixed';
+      body.style.backgroundSize = 'cover';
    }
    console.log(initialAtmosphere);
 }
