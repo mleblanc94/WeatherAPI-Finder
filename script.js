@@ -11,7 +11,7 @@ let temperature = document.querySelector('.temperature');
 let sky = document.querySelector('.sky');
 let skyPicture = document.querySelector('.skyPicture');
 
-// Fetch the API
+// Fetching the API
 
 async function getWeather() {
       let apiUrl = 'https://api.openweathermap.org/data/2.5/weather?q='+input.value+'&appid=0bc1bbb965b846849bf98c2ba435f069';
@@ -38,6 +38,7 @@ let populateTemperature = () => {
 }
 
 // Populating the Atmoshphere on the main page (Sunny, Cloudy, Overcast, etc.)
+// Populating the background images that come with whatever the weather condition is in that given city.
 
 let atmosphere = () => {
    let initialAtmosphere = apiWeather.weather[0].description;
@@ -78,6 +79,10 @@ let atmosphere = () => {
       skyPicture.innerHTML = '<i class="fas fa-cloud"></i>';
       body.style.background = 'url(mist.webp) no-repeat center center fixed';
       body.style.backgroundSize = 'cover';
+   } else if (initialAtmosphere === "very heavy rain") {
+      skyPicture.innerHTML = '<i class="fas fa-cloud-rain"></i>';
+      body.style.background = 'url(rainClouds.webp) no-repeat center center fixed';
+      body.style.backgroundSize = 'cover';
    }
    console.log(initialAtmosphere);
 }
@@ -89,7 +94,6 @@ let resetButton = () => {
    displayBox.style.display = 'none';
    body.style.background = 'url(skyimage.jpg) no-repeat center center fixed';
    body.style.backgroundSize = 'cover';
-
 }
 
 // Event Listeners
