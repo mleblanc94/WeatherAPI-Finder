@@ -73,6 +73,7 @@ input {
 button {
     border-radius: 3px;
     box-shadow: 2px 1px 1px black;
+    cursor: pointer;
 }
 
 @media only screen and (max-width: 500px) {
