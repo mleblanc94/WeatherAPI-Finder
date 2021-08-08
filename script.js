@@ -25,7 +25,7 @@ async function getWeather() {
     } catch(error) {
       errorMessage.style.display = 'inline';
       input.style.marginTop = '7px';
-      errorMessage.innerHTML = "**Sorry, please enter a valid city name**";
+      errorMessage.innerHTML = "Sorry, please enter a valid city name";
       displayBox.style.display = 'none';
           }
        }
