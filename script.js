@@ -22,9 +22,11 @@ async function getWeather() {
        displayBox.style.display = 'flex';
        populateTemperature();
        atmosphere();
-      //  warningMessage();
     } catch(error) {
-        console.log("an error has occurred");
+      errorMessage.style.display = 'inline';
+      input.style.marginTop = '7px';
+      errorMessage.innerHTML = "**Sorry, please enter a valid city name**";
+      displayBox.style.display = 'none';
           }
        }
 
@@ -94,6 +96,8 @@ let resetButton = () => {
    displayBox.style.display = 'none';
    body.style.background = 'url(skyimage.jpg) no-repeat center center fixed';
    body.style.backgroundSize = 'cover';
+   errorMessage.style.display = 'none';
+   input.style.marginTop = '30px';
 }
 
 // Event Listeners
@@ -101,12 +105,5 @@ let resetButton = () => {
 reset.addEventListener('click', resetButton);
 submit.addEventListener('click', getWeather);
 
-
-
-// let warningMessage = () => {
-//    if (apiWeather.message === "city not found") {
-//       errorMessage.innerHTML = "**Sorry, please enter a valid city name**";
-//    }
-// }
 
 
