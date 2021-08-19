@@ -18,7 +18,7 @@ async function getWeather() {
          try {
        const response = await fetch(apiUrl);
        apiWeather = await response.json();
-       console.log(apiWeather);
+       resetErrorMessage();
        displayBox.style.display = 'flex';
        populateTemperature();
        atmosphere();
@@ -96,6 +96,13 @@ let resetButton = () => {
    displayBox.style.display = 'none';
    body.style.background = 'url(skyimage.jpg) no-repeat center center fixed';
    body.style.backgroundSize = 'cover';
+   errorMessage.style.display = 'none';
+   input.style.marginTop = '30px';
+}
+
+// Reset Error Message 
+
+let resetErrorMessage = () => {
    errorMessage.style.display = 'none';
    input.style.marginTop = '30px';
 }
