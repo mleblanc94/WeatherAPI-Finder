@@ -86,7 +86,6 @@ let atmosphere = () => {
       body.style.background = 'url(rainClouds.webp) no-repeat center center fixed';
       body.style.backgroundSize = 'cover';
    }
-   console.log(initialAtmosphere);
 }
 
 // Reset Button
